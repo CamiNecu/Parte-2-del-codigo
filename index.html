@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+    <div class="container">
+    <h2>Notas Front-End</h2>
+    <div id="average"> Promedio General del Curso : N/A </div>
+    <form id="studentForm">
+        <div>
+            <label for="name"> Nombre:</label>
+            <input type="text" id="name" required
+                oninvalid="this.setCustomValidity('Por favor, ingresa el nombre')"
+                oninput="this.setCustomValidity('')">
+        </div>
+        <div>
+            <label for="lastName">Apellido:</label>
+            <input type="text" id="lastName" required
+                oninvalid="this.setCustomValidity('Por favor, ingresa el apellido')"
+                oninput="this.setCustomValidity('')">
+        </div>
+        <div>
+            <label for="grade">Nota:</label>
+            <input type="number" id="grade" step="0.1" min="1" max="7" required
+                oninvalid="this.setCustomValidity('Por favor, ingresa una nota válida entre 1.0 y 7.0')"
+                oninput="this.setCustomValidity('')">
+        </div>
+        <button type="submit"> Guardar Alumno </button>
+
+    </form>
+    <table id="studentsTable" border="1" cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--Datos de las filas de cada alumno-->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+    </div>
+</body>
+</html>

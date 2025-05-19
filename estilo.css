@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5deb3;
+    color: #333;
+}
+
+h2 {
+    color: #04167c;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 10px;
+    background-color: #04167c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #032d99;
+}
+
+#studentsTable {
+    width: 100%;
+    border-collapse: collapse;
+    max-width: 600px;
+    background-color: #a8e3ff;
+}
+
+#studentsTable th, #studentsTable td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+#studentsTable th {
+    background-color: #04167c;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 100%;
+    }
+
+    #studentsTable {
+        font-size: 14px;
+        
+    }
+}
+
+#average{
+    margin: 16px 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #04167c;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #04167c;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
