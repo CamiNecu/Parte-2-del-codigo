@@ -32,13 +32,23 @@ function addStudentToTable(student){
     row.innerHTML=`
     <td>${student.name}</td>
     <td>${student.lastName}</td>
-    <td>${student.grade}</td>`;
-    <td> <button class="delete-btm">Eliminar</button></td>
+    <td>${student.grade}</td>
+    <td><button class="delete-btm">Eliminar</button></td>`;
 
     row.querySelector(".delete-btm").addEventListener("click",function(){
         deleteEstudiante(student,row);
     });
     tableBody.appendChild(row);
+}
+
+function deleteEstudiante(student,row){
+    const index=students.indexOf(student);
+    if(index>-1){
+        students.splice(index,1);
+        row.remove();
+        calcularPromedio();
+       
+    }
 }
 
 //funcion para calcular el promedio de notas
@@ -52,3 +62,5 @@ function calcularPromedio(){
 
     averageDiv.textContent="Promedio General del Curso : "+prom.toFixed(2)
 }
+
+// Agregar Boton Editar
