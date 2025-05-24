@@ -17,11 +17,9 @@ document.getElementById("studentForm").addEventListener("submit",function(e){
     }
 
  if (studentEditingIndex !== null) {
-        // Estamos editando: actualizar en el array
         students[studentEditingIndex] = { name, lastName, grade };
         studentEditingIndex = null; // salir del modo edición
     } else {
-        // Agregar nuevo estudiante
         const student = { name, lastName, grade };
         students.push(student);
     }
@@ -45,8 +43,8 @@ function addStudentToTable(student){
     <td>${student.name}</td>
     <td>${student.lastName}</td>
     <td>${student.grade}</td>
-    <td><button class="delete-btm">Eliminar</button></td>
-    <td><button class="editar-btm">Editar</button></td>`;
+    <td><button class="delete-btm">Eliminar</button>
+        <button class="editar-btm">Editar</button></td>`;
 
 //Se Agrega boton delete para eliminar datos
     row.querySelector(".delete-btm").addEventListener("click",function(){
@@ -92,5 +90,3 @@ function calcularPromedio(){
 
     averageDiv.textContent="Promedio General del Curso : "+prom.toFixed(2)
 }
-
-// Agregar Boton Editar
